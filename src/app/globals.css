@@ -1,0 +1,133 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafc;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  -webkit-font-smoothing: antialiased; /* For Chrome, Safari, etc. */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on Mac */
+}
+
+.p {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.app {
+  width: 80vw;
+  margin: 10vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.surprise {
+  background-color: #ececf1;
+  color: #000;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 4px 12px;
+  margin: 0 0 2px 5px;
+  border: none;
+}
+
+.search-result {
+  margin-top: 10px;
+  overflow: scroll;
+}
+
+.input-container {
+  width: 100%;
+  border: solid 1px #cacaca;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 82, 0.15) 0 2px 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.input-container input {
+  border: none;
+  padding: 13px 14px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+  width: 90%;
+  font-weight: 200;
+}
+
+.input-container input::placeholder {
+  color: #cacaca;
+  font-weight: 200;
+}
+
+.input-container button {
+  min-width: 10%;
+  border: none;
+  border-left: 1px solid #cacaca;
+  background-color: #fff;
+  color: #777;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-container button:active {
+  background-color: #cacaca;
+}
+
+.answer {
+  padding: 13px 14px;
+  border: solid 0.5px #cacaca;
+  background-color: #fff;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 200;
+  border-radius: 6px;
+}
+
+h1 {
+  text-align: center; /* Centers the text horizontally */
+  font-size: clamp(1.5rem, 10vw, 15rem); /* Responsive font size */
+  margin: 0;
+  background: -webkit-linear-gradient(135deg, #d75694, #b1991d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-button {
+  position: relative; /* Enables positioning of the hover content */
+  display: inline-block; /* Ensures the button behaves like a button */
+}
+
+.search-button:hover::after {
+  content: "Submit"; /* Text displayed on hover */
+  position: absolute; /* Positions the content relative to the button */
+  top: 50%; /* Centers the content vertically */
+  left: 50%; /* Centers the content horizontally */
+  transform: translate(-50%, -50%); /* Fine-tunes centering */
+  color: white; /* Adjust text color as needed */
+  background-color: rgb(44, 44, 44); /* Adjust background color as needed */
+  padding: 5px; /* Adjust padding around the text */
+  border-radius: 3px; /* Add rounded corners for a nicer look */
+  font-weight: bold; /* Make the text bolder for better visibility */
+  font-size: inherit; /* Inherit font size from the button */
+  opacity: 0; /* Hides the content initially */
+  transition: opacity 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.search-button:hover::after {
+  opacity: 1; /* Shows the content on hover */
+}
+
+.tagline {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
